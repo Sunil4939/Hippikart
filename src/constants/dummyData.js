@@ -280,6 +280,116 @@ const QuantityCart = [
   
 ];
 
+const Questions = [
+    {
+        id:1,
+        title: 'How do I login/create an account on Hippikart?',
+        content:'What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policyWhat is your Returns/Exchange policy',
+    },
+    {
+        id:2,
+        title: 'Can I use a different number to login?',
+        content:'What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policyWhat is your Returns/Exchange policy',
+    },
+    {
+        id:3,
+        title: 'I am unable to login even after entering the OTP?',
+        content:'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use. According to TrueShip study, over 60% of customers review a Return/Refund  Policy before they make a purchasing decision.',
+    },
+    {
+        id:4,
+        title:'How do I add/edit/delete an address to my account?',
+        content:'What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policy What is your Returns/Exchange policyWhat is your Returns/Exchange policy',
+    }
+];
+
+const HistoryCart = [
+    {
+        id:1,
+        cartImg: images.image11,
+        brandName:'Brand Name',
+        price: '₹2490',
+        productName: 'Product Name',
+        quantity: 2,
+        size: "XS",
+        status:'Delivered',
+    },
+    {
+        id:2,
+        cartImg: images.image11,
+        brandName:'Brand Name',
+        price: '₹2490',
+        productName: 'Product Name',
+        quantity: 2,
+        size: "XS",
+        status:'In Transit',
+    },
+    {
+        id:3,
+        cartImg: images.image11,
+        brandName:'Brand Name',
+        price: '₹2490',
+        productName: 'Product Name',
+        quantity: 2,
+        size: "XS",
+        status:'Delivered',
+    },
+    {
+        id:4,
+        cartImg: images.image11,
+        brandName:'Brand Name',
+        price: '₹2490',
+        productName: 'Product Name',
+        quantity: 2,
+        size: "XS",
+        status:'Delivered',
+    },
+  
+];
+
+const HistoryReview = [
+    {
+        id:1,
+        starIcon: icons.star,
+    },
+    {
+        id:2,
+        starIcon: icons.star,
+    },
+    {
+        id:3,
+        starIcon: icons.star,
+    },
+    {
+        id:4,
+        starIcon: icons.star,
+    },
+  
+];
+
+const PaymentMethod = [
+    {
+        id:1,
+        method:'Cash on Delivery',
+    },
+    {
+        id:2,
+        method: 'Net Banking',
+    },
+    {
+        id:3,
+        method: 'Debit/Credit Card',
+    },
+    {
+        id:4,
+        method: 'Phonepe / Google pay/ BHIM',
+    },
+    {
+        id:5,
+        method: 'Paytm Wallet',
+    },
+];
+
 export default {
     CardCart,
     BlogData,
@@ -289,4 +399,8 @@ export default {
     ProductSize,
     FavouriteCard,
     QuantityCart,
+    Questions,
+    HistoryCart,
+    HistoryReview,
+    PaymentMethod,
 }

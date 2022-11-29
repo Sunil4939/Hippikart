@@ -11,6 +11,16 @@ import AddedCarts from '../../screens/Cart';
 import AddAddress from '../../screens/AddAddress';
 import CategoryPage from '../../screens/Category';
 import FilterPage from '../../screens/Filter';
+import PlaceOrder from '../../screens/PlaceOrder';
+import NewAddress from '../../screens/NewAddress';
+import Help from '../../screens/Help';
+import OrderHistory from '../../screens/History';
+import ProductReturn from '../../screens/ReturnProduct';
+import AboutUs from '../../screens/About';
+import PaymentGateway from '../../screens/Payment';
+import OrderPlaced from '../../screens/OrderPlaced';
+import ReasonOfReturn from '../../screens/ReasonReturn';
+import SetAccountDetails from '../../screens/SetAccount';
 
 
 const Stack = createStackNavigator();
@@ -66,10 +76,39 @@ const FavouriteStack = () => {
             </Stack.Navigator>
     );
 }
+const HistoryStack = () => {
+    return (
+            <Stack.Navigator initialRouteName='HistoryScreen'>
+               
+                <Stack.Screen name="HistoryScreen" component={OrderHistory}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                 
+                 <Stack.Screen name="ProductReturn" component={ProductReturn}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                  <Stack.Screen name="ReasonReturnProduct" component={ReasonOfReturn}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                 
+                 <Stack.Screen name="SetAccount" component={SetAccountDetails}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+            </Stack.Navigator>
+    );
+}
 
 const AddedCartStack = () => {
     return (
-            <Stack.Navigator initialRouteName='CategoryScreen'>
+            <Stack.Navigator initialRouteName='CartScreen'>
                
                 <Stack.Screen name="CartScreen" component={AddedCarts}
                     options={() => ({
@@ -91,6 +130,36 @@ const AddedCartStack = () => {
                         headerShown: false,
                     })}
                 />
+                   <Stack.Screen name="PlaceOrderScreen" component={PlaceOrder}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                <Stack.Screen name="NewAddressScreen" component={NewAddress}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                 <Stack.Screen name="HelpScreen" component={Help}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                 <Stack.Screen name="About" component={AboutUs}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                <Stack.Screen name="OrderPlaced" component={OrderPlaced}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
+                 <Stack.Screen name="PaymentScreen" component={PaymentGateway}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
             </Stack.Navigator>
     );
 }
@@ -99,5 +168,6 @@ const AddedCartStack = () => {
 export {
     HomeStack,
     FavouriteStack,
+    HistoryStack,
     AddedCartStack,
 }

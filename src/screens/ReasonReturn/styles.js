@@ -18,34 +18,37 @@ export default StyleSheet.create({
         width: width * .03,
         height: height * .02,
     },
-    pageTitle: {
-        fontFamily: 'Poppins SemiBold 600',
-        fontSize: 16,
-        lineHeight: 20,
-        color: '#353638',
+    brand: {
+        width: width * .32,
+        height: height * .039,
         marginLeft: width * .03,
     },
+    sadMood:{
+        width: width * .7,
+        height: height * .35,
+    },
+    imageContainer:{
+        alignItems:'center',
+        marginTop: height * .04,
+        marginHorizontal: width * .04,
+    },
+    reasonContainer:{
+        marginTop: height * .01,
+        marginHorizontal: width * .04,  
+    },
 
-    row: {
-        flexDirection: 'row',
-        marginTop: height * .02,
+    title: {
+        fontFamily: 'Poppins Medium 500',
+        fontSize: 14,
+        lineHeight: 21,
+        color: COLORS.black,
     },
-    sideBar: {
-        width: width * .4,
-        height: height,
-        paddingVertical: height * .02,
-        borderRadius: 7,
-        elevation: 8,
-        backgroundColor:COLORS.white
-    },
+
+   
     row1: {
         flexDirection: 'row',
         alignItems: "center",
         marginTop: height * .015,
-    },
-    rightBox: {
-        marginTop: height * .02,
-        marginLeft: width * .05,
     },
     label: {
         fontFamily: 'Poppins Regular 400',
@@ -54,39 +57,20 @@ export default StyleSheet.create({
         color: '#302F33',
         marginLeft: width * .03,
     },
-
-    btn: {
-        backgroundColor: COLORS.white,
-        height: height * .06,
-        alignItems: "flex-start",
-        justifyContent: 'center',
-        marginTop: height * .01,
-        paddingHorizontal: width * .06,
-    },
-    btnTxt: {
-        fontFamily: 'Poppins Regular 400',
-        fontSize: 14,
-        lineHeight: 18,
-        color: '#302F33',
-    },
     checkBox:{
         transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }]
     },
     btnRow:{
-        position:'absolute',
-        bottom: height * .2,
-        flexDirection:'row',
-        justifyContent: 'space-between',
-        width: width * .56,
-        marginHorizontal: width * -.032,
+        alignItems:'center',
+        marginVertical: height * .05,
     },
     bottomBtn:{
-        backgroundColor: COLORS.yellow,
-        height: height * .05,
-        width: width * .27,
+        backgroundColor: COLORS.orange1,
+        height: height * .06,
+        width: width * .3,
         alignItems:'center',
         justifyContent: 'center',
-        borderRadius: 5,
+        borderRadius: 7,
     },
     bottomBtnTxt:{
         fontFamily: 'Poppins SemiBold 600',
@@ -94,6 +78,4 @@ export default StyleSheet.create({
         lineHeight: 18,
         color: COLORS.white, 
     },
-
-
 })

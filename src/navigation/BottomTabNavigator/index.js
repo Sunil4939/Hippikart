@@ -5,7 +5,7 @@ import { getFocusedRouteNameFromRoute, } from '@react-navigation/native';
 import Loading from "../../screens/loading";
 import { COLORS, icons,  } from "../../constants";
 import styles from "./styles";
-import { HomeStack, FavouriteStack, AddedCartStack } from "../StackNavigator";
+import { HomeStack, FavouriteStack, AddedCartStack, HistoryStack } from "../StackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +13,7 @@ const TabNavigator = () => {
 
   return (
   
-    <Tab.Navigator initialRouteName='Cart'
+    <Tab.Navigator initialRouteName='MyOrders'
      screenOptions={() => ({
       tabBarActiveTintColor: COLORS.yellow,
       tabBarInactiveTintColor: COLORS.black2,
@@ -32,7 +32,7 @@ const TabNavigator = () => {
         tabBarIcon: () => <Image style={[styles.heart,]} source={icons.heart} />
       })}
        />
-      <Tab.Screen name="MyOrders" component={Loading} 
+      <Tab.Screen name="MyOrders" component={HistoryStack} 
       options={() => ({
         headerShown: false,
         tabBarLabel: '',

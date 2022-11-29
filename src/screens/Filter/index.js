@@ -6,11 +6,7 @@ import styles from "./styles";
 
 
 const FilterPage = ({ navigation }) => {
-    // const gender = [
-    //     { label: 'Men', value: 'first' },
-    //     { label: 'Women', value: 'second' },
-    //     { label: 'Kids', value: 'third' },
-    // ]
+    
 
     const ButtonName = [
         { id: 1, name: 'Gender' },
@@ -25,7 +21,6 @@ const FilterPage = ({ navigation }) => {
         { label: 'Women', value: 'second', checked: false, },
         { label: 'Kids', value: 'third', checked: false, },
     ])
-    // const [checked, setChecked] = useState();
 
     const checkboxHandler = (value, index) => {
         const newValue = gender.map((checkbox, i) => {
@@ -74,12 +69,28 @@ const FilterPage = ({ navigation }) => {
                             <Text style={styles.label}>{item.label}</Text>
                         </View>
                     ))}
+                     <View style={styles.btnRow}>
+                        <TouchableOpacity style={[styles.bottomBtn, {backgroundColor: COLORS.white}]}>
+                            <Text style={[styles.bottomBtnTxt, {color: COLORS.yellow}]}>Reset</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.bottomBtn} onPress={()=> navigation.navigate('About')} >
+                            <Text style={styles.bottomBtnTxt}>Apply filters</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
 
         </View>
 
     )
+}
+
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = {
+
 }
 
 export default FilterPage;

@@ -35,4 +35,12 @@ const FavouriteCarts = ({ navigation }) => {
     )
 }
 
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = {
+
+}
+
 export default FavouriteCarts;

@@ -31,7 +31,11 @@ const product5 = require('../assets/images/product5.png')
 const about1 = require('../assets/images/about1.png') 
 const about2 = require('../assets/images/about2.png') 
 const about3 = require('../assets/images/about3.png') 
-const favourite = require('../assets/images/favourite.png') 
+const favourite = require('../assets/images/favourite.png')
+const discount = require('../assets/images/Ellipse.png')  
+const delivery = require('../assets/images/Delivery.png')  
+const sadMood = require('../assets/images/Sad.png')  
+const userProfile = require('../assets/images/userProfile.png')
 
 export default {
     logo,
@@ -67,4 +71,8 @@ export default {
     about2,
     about3,
     favourite,
+    discount,
+    delivery,
+    sadMood,
+    userProfile,
 }

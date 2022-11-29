@@ -28,6 +28,17 @@ const star1 = require("../assets/icons/Star1.png")
 const truck = require("../assets/icons/Truck.png")
 const filter = require("../assets/icons/Filter.png")
 const sort = require("../assets/icons/Swap.png")
+const orderTrack = require("../assets/icons/OrderTrack.png")
+const account = require("../assets/icons/account.png")
+const returnProduct = require("../assets/icons/return.png")
+const up = require("../assets/icons/up.png")
+const down = require("../assets/icons/down.png")
+const return1 = require("../assets/icons/return1.png")
+const call = require("../assets/icons/Call.png")
+const mail = require("../assets/icons/mail.png")
+const editText = require("../assets/icons/EditText.png")
+const Edit = require("../assets/icons/Edit.png")
+const Path = require("../assets/icons/Path.png")
 
 export default {
     ArrowDown,
@@ -59,4 +70,15 @@ export default {
     truck,
     filter,
     sort,
+    orderTrack,
+    account,
+    returnProduct,
+    up,
+    down,
+    return1,
+    call,
+    mail,
+    editText,
+    Edit,
+    Path,
 }

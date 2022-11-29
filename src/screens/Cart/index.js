@@ -30,13 +30,21 @@ const AddedCarts = ({ navigation }) => {
             <View style={styles.cardContainer}>
                 {dummyData.FavouriteCard.map(() => (
                     <QuantityCart 
-                    onPress={()=>navigation.navigate('AddressScreen')}
+                    onPress={()=>navigation.navigate('PlaceOrderScreen')}
                     navigation={navigation} />
                 ))}
             </View>
         </View>
        </ScrollView>
     )
+}
+
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = {
+
 }
 
 export default AddedCarts;

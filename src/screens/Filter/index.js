@@ -73,7 +73,7 @@ const FilterPage = ({ navigation }) => {
                         <TouchableOpacity style={[styles.bottomBtn, {backgroundColor: COLORS.white}]}>
                             <Text style={[styles.bottomBtnTxt, {color: COLORS.yellow}]}>Reset</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.bottomBtn} onPress={()=> navigation.navigate('About')} >
+                        <TouchableOpacity style={styles.bottomBtn} >
                             <Text style={styles.bottomBtnTxt}>Apply filters</Text>
                         </TouchableOpacity>
                     </View>

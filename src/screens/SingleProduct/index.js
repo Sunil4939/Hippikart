@@ -4,42 +4,11 @@ import ClothesCard from "../../component/ClothesCard";
 import Footer from "../../component/Footer";
 import ProductSlider from "../../component/ProductSlider";
 import { images, icons, COLORS, dummyData } from "../../constants";
-import { TabView, SceneMap } from 'react-native-tab-view';
 import styles from "./styles";
-const { width, height } = Dimensions.get('window')
-
-
-const FirstRoute = () => (
-    <View style={styles} >
-        <Text style={styles.tabTxt}>Model's height is 6.2 ft with chest size 38'' is wearing size M for a snug fit.</Text>
-        </View>
-  );
-  
-  const SecondRoute = () => (
-    <View style={styles} >
-        <Text style={styles.tabTxt}>Intensely soft</Text>
-        <Text style={styles.tabTxt}>No-fade classy shades</Text>
-        <Text style={styles.tabTxt}>Intensely soft</Text>
-        <Text style={styles.tabTxt}>No-fade classy shades</Text>
-        </View>
-  );
-  
-  const renderScene = SceneMap({
-    size: FirstRoute,
-    details: SecondRoute,
-    care: SecondRoute,
-  });
-
+import Tabs from "../../component/Tabs";
   
 const SingleProduct = ({ navigation }) => {
-    // const layout = useWindowDimensions();
-
-    const [index, setIndex] = React.useState(0);
-    const [routes] = React.useState([
-      { key: 'size', title: 'Model Size & Fit' },
-      { key: 'details', title: 'PRODUCT DETAILS ' },
-      { key: 'care', title: 'PRODUCT CARE' },
-    ]);
+    
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.container}>
@@ -53,6 +22,7 @@ const SingleProduct = ({ navigation }) => {
 
                 <View>
                     <ProductSlider />
+                    
                     <View style={styles.productTxtBox}>
                         <View style={styles.productTitileRow}>
                             <Text style={styles.productTitile}>Product Name Product Name</Text>
@@ -115,16 +85,9 @@ const SingleProduct = ({ navigation }) => {
                         </View>
                         <View>
                             <Text style={styles.tabTitle}>SPECIFICATIONS</Text>
-                            <TabView
-                                navigationState={{ index, routes }}
-                                renderScene={renderScene}
-                                onIndexChange={setIndex}
-                                initialLayout={{ width: width,}}
-                                style={{height: height * .25, marginTop: height * .02,}}
-                                pagerStyle={{marginTop: height * .02,}}
-                                
-                                // indicatorStyle={{ backgroundColor: 'white' }}
-                            />
+
+                            <Tabs />
+                           
                         </View>
                     </View>
                 </View>

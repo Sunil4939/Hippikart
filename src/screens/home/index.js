@@ -71,7 +71,7 @@ const HomeScreen = ({ navigation }) => {
                             <Image source={images.image3} style={styles.categoryImg}></Image>
                             <Text style={styles.categoryTxt}>Women</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => navigation.navigate('SizeScreen')}>
+                        <TouchableOpacity >
                             <Image source={images.image4} style={styles.categoryImg}></Image>
                             <Text style={styles.categoryTxt}>men</Text>
                         </TouchableOpacity>
@@ -225,7 +225,7 @@ const HomeScreen = ({ navigation }) => {
                         <TouchableOpacity>
                             <Text style={styles.linearTxt}>Form</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => navigation.navigate('BlogScreen')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Blogs')}>
                             <Text style={styles.linearTxt}>Blogs</Text>
                         </TouchableOpacity>
                         <TouchableOpacity>

@@ -5,8 +5,7 @@ import SplashScreen from '../screens/splash';
 import LoginPage from '../screens/login';
 import OtpPage from '../screens/otp';
 import Loading from '../screens/loading';
-// import DrawerNavigator from './DrawerNavigator';
-
+import DrawerNavigator from '../navigation/DrawerNavigator';
 import TabNavigator from '../navigation/BottomTabNavigator';
 
 
@@ -15,7 +14,7 @@ const Stack = createStackNavigator();
 const Root = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='BottomTab'>
+            <Stack.Navigator initialRouteName='Login'>
                 <Stack.Screen name="Splash" component={SplashScreen}
                     options={() => ({
                         headerShown: false,
@@ -36,17 +35,17 @@ const Root = () => {
                         headerShown: false,
                     })}
                 />
-                 {/* <Stack.Screen name="Drawer" component={DrawerNavigator}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                /> */}
-                  <Stack.Screen name="BottomTab" component={TabNavigator}
+                 <Stack.Screen name="Drawer" component={DrawerNavigator}
                     options={() => ({
                         headerShown: false,
                     })}
                 />
-               
+                
+                <Stack.Screen name="BottomTab" component={TabNavigator}
+                    options={() => ({
+                        headerShown: false,
+                    })}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

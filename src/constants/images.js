@@ -36,6 +36,9 @@ const discount = require('../assets/images/Ellipse.png')
 const delivery = require('../assets/images/Delivery.png')  
 const sadMood = require('../assets/images/Sad.png')  
 const userProfile = require('../assets/images/userProfile.png')
+const yourProfile = require('../assets/images/yourProfile.png')
+const walletImage = require('../assets/images/walletImage.png')
+const ReferImage = require('../assets/images/ReferImage.png')
 
 export default {
     logo,
@@ -75,4 +78,7 @@ export default {
     delivery,
     sadMood,
     userProfile,
+    yourProfile,
+    walletImage,
+    ReferImage,
 }

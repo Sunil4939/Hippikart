@@ -34,7 +34,7 @@ const OtpPage = ({navigation}) => {
                     <Text style={styles.resendOtp}> Resend OTP</Text>
                 </TouchableOpacity>
             </View>
-            <Button text={'Done'} style={styles.btn} onPress={()=> navigation.navigate('BottomTab')} />
+            <Button text={'Done'} style={styles.btn} onPress={()=> navigation.navigate('Drawer')} />
         </View>
     //   </KeyboardAwareScrollView>
     )

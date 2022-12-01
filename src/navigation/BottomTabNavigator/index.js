@@ -2,10 +2,9 @@ import React from "react";
 import { Image,  View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute, } from '@react-navigation/native';
-import Loading from "../../screens/loading";
 import { COLORS, icons,  } from "../../constants";
 import styles from "./styles";
-import { HomeStack, FavouriteStack, AddedCartStack, HistoryStack } from "../StackNavigator";
+import { HomeStack, FavouriteStack, AddedCartStack, HistoryStack, NotificationStack } from "../StackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,14 +12,14 @@ const TabNavigator = () => {
 
   return (
   
-    <Tab.Navigator initialRouteName='MyOrders'
+    <Tab.Navigator initialRouteName='HomeTab'
      screenOptions={() => ({
       tabBarActiveTintColor: COLORS.yellow,
       tabBarInactiveTintColor: COLORS.black2,
       tabBarStyle:styles.tabBarStyle,
     })} >
       
-      <Tab.Screen name="Home" component={HomeStack}
+      <Tab.Screen name="HomeTab" component={HomeStack}
         options={() => ({
           headerShown: false,
           tabBarIcon: () => <Image style={[styles.home,]} source={icons.home} />
@@ -42,7 +41,7 @@ const TabNavigator = () => {
       </View>
       })}
      />
-     <Tab.Screen name="Notification" component={Loading}
+     <Tab.Screen name="Notification" component={NotificationStack}
         options={() => ({
           headerShown: false,
           tabBarIcon: () => <View>
@@ -58,7 +57,7 @@ const TabNavigator = () => {
       <Tab.Screen name="Cart" component={AddedCartStack} 
       options={() => ({
         headerShown: false,
-        tabBarIcon: () => <Image style={[styles.buy,]} source={icons.buy} />
+        tabBarIcon: () => <Image style={styles.buy} source={icons.buy} />
        
       })}
       />

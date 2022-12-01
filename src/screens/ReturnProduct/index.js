@@ -84,7 +84,7 @@ const ProductReturn = ({ navigation }) => {
                                     )}
                                 </View>
                                </View>
-                                <TouchableOpacity style={styles.postBtn} onPress={() => navigation.navigate('SetAccount')} >
+                                <TouchableOpacity style={styles.postBtn}  >
                                     <Text style={styles.postBtnTxt}>Post</Text>
                                 </TouchableOpacity>
                             </View>

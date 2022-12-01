@@ -1,9 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../../screens/home';
-import BlogPage from '../../screens/Blogs';
 import SingleBlog from '../../screens/SingleBlog';
-import SizeChart from '../../screens/sizeCharts';
 import SearchPage from '../../screens/Search';
 import SingleProduct from '../../screens/SingleProduct';
 import FavouriteCarts from '../../screens/Favourite';
@@ -13,154 +11,209 @@ import CategoryPage from '../../screens/Category';
 import FilterPage from '../../screens/Filter';
 import PlaceOrder from '../../screens/PlaceOrder';
 import NewAddress from '../../screens/NewAddress';
-import Help from '../../screens/Help';
 import OrderHistory from '../../screens/History';
 import ProductReturn from '../../screens/ReturnProduct';
-import AboutUs from '../../screens/About';
 import PaymentGateway from '../../screens/Payment';
 import OrderPlaced from '../../screens/OrderPlaced';
 import ReasonOfReturn from '../../screens/ReasonReturn';
 import SetAccountDetails from '../../screens/SetAccount';
+import Notification from '../../screens/Notification';
+import Coupons from '../../screens/Coupon';
+import MyAccount from '../../screens/MyAccount';
+import Wallet from '../../screens/Wallet';
+import Refer from '../../screens/Refer';
 
+const HomeStackData = [
+    {
+        id: 1,
+        name: 'HomeScreen',
+        component: HomeScreen,
+    },
+    {
+        id: 2,
+        name: 'SingleBlogScreen',
+        component: SingleBlog,
+    },
+    {
+        id: 3,
+        name: 'SingleProductScreen',
+        component: SingleProduct,
+    },
+    {
+        id: 4,
+        name: 'SearchScreen',
+        component: SearchPage,
+    },
+]
+
+const HistoryStackData = [
+    {
+        id: 1,
+        name: 'HistoryScreen',
+        component: OrderHistory,
+    },
+    {
+        id: 2,
+        name: 'ProductReturn',
+        component: ProductReturn,
+    },
+    {
+        id: 3,
+        name: 'ReasonReturnProduct',
+        component: ReasonOfReturn,
+    },
+
+]
+
+const NotificationStackData = [
+    {
+        id: 1,
+        name: 'NotificationScreen',
+        component: Notification,
+    },
+    {
+        id: 2,
+        name: 'CouponScreen',
+        component: Coupons,
+    },
+    {
+        id: 3,
+        name: 'AccountDetails',
+        component: MyAccount,
+    },
+    {
+        id: 4,
+        name: 'WalletScreen',
+        component: Wallet,
+    },
+    {
+        id: 5,
+        name: 'ReferScreen',
+        component: Refer,
+    },
+    {
+        id: 6,
+        name: 'SetAccount',
+        component: SetAccountDetails,
+    },
+]
+
+const AddedCartStackData = [
+    {
+        id: 1,
+        name: 'CartScreen',
+        component: AddedCarts,
+    },
+    {
+        id: 2,
+        name: 'AddressScreen',
+        component: AddAddress,
+    },
+    {
+        id: 3,
+        name: 'CategoryScreen',
+        component: CategoryPage,
+    },
+    {
+        id: 4,
+        name: 'FilterScreen',
+        component: FilterPage,
+    },
+    {
+        id: 5,
+        name: 'PlaceOrderScreen',
+        component: PlaceOrder,
+    },
+    {
+        id: 6,
+        name: 'NewAddressScreen',
+        component: NewAddress,
+    },
+    {
+        id: 7,
+        name: 'OrderPlaced',
+        component: OrderPlaced,
+    },
+    {
+        id: 8,
+        name: 'PaymentScreen',
+        component: PaymentGateway,
+    },
+]
 
 const Stack = createStackNavigator();
 
 const HomeStack = () => {
+
     return (
-            <Stack.Navigator initialRouteName='HomeScreen'>
-                
-                  <Stack.Screen name="HomeScreen" component={HomeScreen}
+        <Stack.Navigator initialRouteName='HomeScreen'>
+            {HomeStackData.map((item) =>
+                <Stack.Screen name={item.name} component={item.component}
                     options={() => ({
                         headerShown: false,
                     })}
                 />
-                <Stack.Screen name="BlogScreen" component={BlogPage}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 <Stack.Screen name="SingleBlogScreen" component={SingleBlog}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                  <Stack.Screen name="SingleProductScreen" component={SingleProduct}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                <Stack.Screen name="SizeScreen" component={SizeChart}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                   <Stack.Screen name="SearchScreen" component={SearchPage}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            </Stack.Navigator>
+            )}
+
+        </Stack.Navigator>
     );
 }
 
 const FavouriteStack = () => {
     return (
-            <Stack.Navigator initialRouteName='FavouriteScreen'>
-               
-                <Stack.Screen name="FavouriteScreen" component={FavouriteCarts}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 
-            </Stack.Navigator>
+        <Stack.Navigator initialRouteName='FavouriteScreen'>
+
+            <Stack.Screen name="FavouriteScreen" component={FavouriteCarts}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+
+        </Stack.Navigator>
     );
 }
 const HistoryStack = () => {
     return (
-            <Stack.Navigator initialRouteName='HistoryScreen'>
-               
-                <Stack.Screen name="HistoryScreen" component={OrderHistory}
+        <Stack.Navigator initialRouteName='HistoryScreen'>
+            {HistoryStackData.map((item) =>
+                <Stack.Screen name={item.name} component={item.component}
                     options={() => ({
                         headerShown: false,
                     })}
                 />
-                 
-                 <Stack.Screen name="ProductReturn" component={ProductReturn}
+            )}
+
+        </Stack.Navigator>
+    );
+}
+
+const NotificationStack = () => {
+    return (
+        <Stack.Navigator initialRouteName='NotificationScreen'>
+            {NotificationStackData.map((item) =>
+                <Stack.Screen name={item.name} component={item.component}
                     options={() => ({
                         headerShown: false,
                     })}
                 />
-                  <Stack.Screen name="ReasonReturnProduct" component={ReasonOfReturn}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 
-                 <Stack.Screen name="SetAccount" component={SetAccountDetails}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            </Stack.Navigator>
+            )}
+
+        </Stack.Navigator>
     );
 }
 
 const AddedCartStack = () => {
     return (
-            <Stack.Navigator initialRouteName='CartScreen'>
-               
-                <Stack.Screen name="CartScreen" component={AddedCarts}
+        <Stack.Navigator initialRouteName='CartScreen'>
+            {AddedCartStackData.map((item) =>
+                <Stack.Screen name={item.name} component={item.component}
                     options={() => ({
                         headerShown: false,
                     })}
                 />
-                 <Stack.Screen name="AddressScreen" component={AddAddress}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                  <Stack.Screen name="CategoryScreen" component={CategoryPage}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                <Stack.Screen name="FilterScreen" component={FilterPage}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                   <Stack.Screen name="PlaceOrderScreen" component={PlaceOrder}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                <Stack.Screen name="NewAddressScreen" component={NewAddress}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 <Stack.Screen name="HelpScreen" component={Help}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 <Stack.Screen name="About" component={AboutUs}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                <Stack.Screen name="OrderPlaced" component={OrderPlaced}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-                 <Stack.Screen name="PaymentScreen" component={PaymentGateway}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            </Stack.Navigator>
+            )}
+         
+        </Stack.Navigator>
     );
 }
 
@@ -169,5 +222,6 @@ export {
     HomeStack,
     FavouriteStack,
     HistoryStack,
+    NotificationStack,
     AddedCartStack,
 }

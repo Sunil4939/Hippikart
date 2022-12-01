@@ -67,8 +67,8 @@ const SetAccountDetails = ({ navigation }) => {
                     />
                     <Text style={styles.text}> Make this as my default address</Text>
                     </View>
-                    <TouchableOpacity style={styles.addBtn} onPress={()=>navigation.navigate('NewAddressScreen')}>
-                            <Text style={styles.addBtnText}>Add Address</Text>
+                    <TouchableOpacity style={styles.addBtn}>
+                            <Text style={styles.addBtnText}>Done</Text>
                         </TouchableOpacity>
                 </View>
 

@@ -10,7 +10,7 @@ const Header = ({navigation, HolderName }) => {
                 <Image style={styles.brand} source={images.brand} />
             </View>
             <View style={styles.topBar}>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={()=> navigation.toggleDrawer()} >
                     <Image style={styles.menu} source={icons.menu} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.searchBar} onPress={()=> navigation.navigate('SearchScreen')}>

@@ -32,7 +32,7 @@ const AddAddress = ({ navigation }) => {
                         <TextInput style={[styles.input, { width: width * .42, }]} placeholder="State*" placeholderTextColor={'#A7A7A7'} />
                     </View>
                     <View style={styles.BtnRow}>
-                        <TouchableOpacity style={[styles.btn, { backgroundColor: COLORS.black, borderWidth: 0,  }]}>
+                        <TouchableOpacity style={[styles.btn, { backgroundColor: COLORS.black, borderWidth: 0,}]}>
                             <Text style={[styles.btnTxt, { color: COLORS.white, }]}>Home</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.btn}>

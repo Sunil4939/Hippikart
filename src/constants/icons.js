@@ -39,6 +39,17 @@ const mail = require("../assets/icons/mail.png")
 const editText = require("../assets/icons/EditText.png")
 const Edit = require("../assets/icons/Edit.png")
 const Path = require("../assets/icons/Path.png")
+const Profile = require("../assets/icons/Profile.png")
+const Chart = require("../assets/icons/Chart.png")
+const Wallet = require("../assets/icons/Wallet.png")
+const users = require("../assets/icons/users.png")
+const Info = require("../assets/icons/Info.png")
+const Lock = require("../assets/icons/Lock.png")
+const Logout = require("../assets/icons/Logout.png")
+const Location = require("../assets/icons/Location.png")
+const Email = require("../assets/icons/Email.png")
+const Calling = require("../assets/icons/Calling.png")
+const Category = require("../assets/icons/Category.png")
 
 export default {
     ArrowDown,
@@ -81,4 +92,15 @@ export default {
     editText,
     Edit,
     Path,
+    Profile,
+    Chart,
+    Wallet,
+    users,
+    Info,
+    Lock,
+    Logout,
+    Location,
+    Email,
+    Calling,
+    Category,
 }

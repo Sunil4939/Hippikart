@@ -117,7 +117,7 @@ const ProductData = [
     },
     {
         id: 5,
-        image: images.product5,
+        image: images.product4,
     },
 ]
 const ProductSize = [
@@ -390,6 +390,88 @@ const PaymentMethod = [
     },
 ];
 
+const NotificationData = [
+    {
+        id:1,
+        title: 'New collection alert',
+        content:'New collection has been added',
+    },
+    {
+        id:2,
+        title: 'New collection alert',
+        content:'New collection has been added',
+    },
+    
+];
+
+const CouponData = [
+    {
+        id:1,
+        title: '20% OFF',
+        content:'Get off on purchase of ₹2000',
+    },
+    {
+        id:2,
+        title: '20% OFF',
+        content:'Get off on purchase of ₹2000',
+    },
+    {
+        id:3,
+        title: '20% OFF',
+        content:'Get off on purchase of ₹2000',
+    },
+    {
+        id:4,
+        title: '20% OFF',
+        content:'Get off on purchase of ₹2000',
+    },
+    {
+        id:5,
+        title: '20% OFF',
+        content:'Get off on purchase of ₹2000',
+    },
+];
+
+const AccountData = [
+    {
+        id:1,
+        title: 'Edit Profile',
+        icon: icons.Profile,
+    },
+    {
+        id:2,
+        title: 'My Coupons',
+        icon: icons.Chart,
+    },
+    {
+        id:3,
+        title: 'Wallet',
+        icon: icons.Wallet,
+    },
+    {
+        id:4,
+        title: 'Refer & Earn',
+        icon: icons.users,
+    },
+    {
+        id:5,
+        title: 'Help & FAQ',
+        icon: icons.Info,
+    },
+    {
+        id:6,
+        title: 'About Us',
+        icon: icons.Lock,
+    },
+    {
+        id:7,
+        title: 'Logout',
+        icon: icons.Logout,
+    },
+];
+
+
+
 export default {
     CardCart,
     BlogData,
@@ -403,4 +485,7 @@ export default {
     HistoryCart,
     HistoryReview,
     PaymentMethod,
+    NotificationData,
+    CouponData,
+    AccountData,
 }
